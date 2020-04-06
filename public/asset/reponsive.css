@@ -1,0 +1,20 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { 
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+	.PAGE{padding: 5px}
+	#category .item-category {
+	    height: 110px;
+	}
+}

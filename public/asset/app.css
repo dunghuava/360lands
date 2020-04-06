@@ -1,0 +1,29 @@
+@import url('base.css');
+
+#category .item-category{
+    height: 180px;
+	padding: 5px;
+}
+#category .item-category img{
+   border-radius: 5px;
+   object-fit: cover;
+}
+#category .item-category .category-name-overlay{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	left: 0px;
+	padding: 5px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+	border-radius: 5px;
+	color: #fff;
+	transition: all 0.2s;
+}
+#category .item-category:hover .category-name-overlay{
+	padding-bottom: 25px;
+}
+#account .form{
+	border: 1px solid #cccccc;
+	background: #ffffff;
+}
+.form label{font-size: 12px;}
