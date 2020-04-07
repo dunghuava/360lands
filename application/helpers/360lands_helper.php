@@ -14,6 +14,22 @@ function mlog($data,$die=false){
 		die();
 	}
 }
+function replace_value($value,$default){
+	if (isset($value)){
+		return $value;
+	}
+	return $default;
+}
+function dateinsert(){
+	return date('Y-m-d H:i:s');
+}
+function alert($type='success',$message='message'){
+	return '<div class="form-group">
+			<div class="alert alert-'.$type.'">
+			<strong class="fa fa-bell"></strong> '.$message.'
+		</div>
+	</div>';
+}
 function createSlug($str,$options=array()) {
 	// Make sure string is in UTF-8 and strip invalid UTF-8 characters
 	$str = mb_convert_encoding((string)$str, 'UTF-8', mb_list_encodings());

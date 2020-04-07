@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MY_Controller extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		date_default_timezone_set('Asia/Ho_chi_minh');
+	}
 	public function getLayout($page,$data=null,$nav=true){
 		if (isset($data['page_name'])){
 			$data['page_name']=$data['page_name'];

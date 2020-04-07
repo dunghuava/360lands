@@ -12,6 +12,9 @@ class Account_M extends CI_Model {
 	function find($condition){
 		return $this->db->where($condition)->get($this->table)->row_array();
 	}
+	function create($data){
+		return $this->db->insert($this->table,$data);
+	}
 }
 
 /* End of file Account_M.php */

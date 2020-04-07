@@ -16,7 +16,7 @@
 	</div>
 </section>
 <script>
-	auto_back(10);
+	auto_back(5);
 	function auto_back(times){
 		var inter_val = setInterval(() => {
 			$('#text-back').html('<span class="fa fa-arrow-right"></span>Tự động chuyển hướng trong '+times+' giây');
