@@ -6,7 +6,7 @@ function img_url($str){
 function asset_url($str){
 	return base_url().'public/asset/'.$str;
 }
-function mlog($data,$die=false){
+function mdie($data,$die=false){
 	echo '<pre>';
 		print_r($data);
 	echo '</pre>';
@@ -23,7 +23,7 @@ function replace_value($value,$default){
 function dateinsert(){
 	return date('Y-m-d H:i:s');
 }
-function alert($type='success',$message='message'){
+function alert($type,$message){
 	return '<div class="form-group">
 			<div class="alert alert-'.$type.'">
 			<strong class="fa fa-bell"></strong> '.$message.'

@@ -9,7 +9,7 @@ class Account extends MY_Controller {
 		parent::__construct();
 		$this->load->model('Account_M');
 	}
-	function check_login(){
+	function islogin(){
 		if ($this->get_userdata('member_signin')){
 			redirect(base_url().'discovery','location');
 		}
@@ -20,7 +20,7 @@ class Account extends MY_Controller {
 	}
 	public function sign_in()
 	{
-		$this->check_login();
+		$this->islogin();
 		$data['page_name']='Đăng nhập';
 		$this->getLayout('account/sign_in',$data);
 	}
@@ -48,7 +48,7 @@ class Account extends MY_Controller {
 	}
 	public function sign_up()
 	{
-		$this->check_login();
+		$this->islogin();
 		$data['page_name']='Tạo tài khoản';
 		$this->getLayout('account/sign_up',$data);
 	}

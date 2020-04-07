@@ -8,6 +8,7 @@ a{
 }
 a:hover{
 	color: #000000;
+	text-decoration: none;
 }
 body{
 	background: #E9EBEE;
@@ -67,6 +68,9 @@ img{
 .bg-w{
 	background: #ffffff;
 }
+.form-group {
+    margin-bottom: 10px;
+}
 .page-title{font-weight: bold;}
 .p15{padding: 15px;}
 .p5{padding: 5px;}
@@ -87,3 +91,4 @@ label.error{font-size: 11px;color: red;}
 	font-size: 12px;
 	border-bottom: 1px dotted;
 }
+ul.list li{list-style: inside;}

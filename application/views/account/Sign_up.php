@@ -1,50 +1,65 @@
 <section id="account" class="sec-home-page">
 	<div class="container"><br>
 		<div class="row">
-			<div class="col-md-4 col-xs-1"></div>
-			<div class="col-md-4 form rds5 col-xs-10">
-				<h2 class="page-title"><?=$page_name?></h2>
-				<div id="register_status"></div>
-				<form onsubmit="return do_sign_up()" class="form-group row form-validate" id="form-login-acc" action="" method="post">
-					<div class="form-group col-md-6">
-						<label for="email-acc">Họ</label>
-						<input required id="member_firstname" name="member_firstname" type="text" class="form-control">
-					</div>
-					<div class="form-group col-md-6">
-						<label for="email-acc">Tên</label>
-						<input required id="member_lastname" name="member_lastname" type="text" class="form-control">
-					</div>
-					<div class="form-group col-md-12">
-						<label for="pass-acc">Tên đăng nhập</label>
-						<input minlength="5" required id="member_username" name="member_username" type="text" class="form-control">
-					</div>
-					<div class="form-group col-md-12">
-						<label for="pass-acc">Email</label>
-						<input id="member_email" name="member_email" type="email" class="form-control">
-					</div>
-					<div class="form-group col-md-12">
-						<label for="pass-acc">Mật khẩu</label>
-						<input minlength="5" required id="member_password" name="member_password" type="password" class="form-control">
-					</div>
-					<div class="form-group col-md-12">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="remember">
-								&nbsp;<span style="font-size:12px">Tôi đồng ý với mọi điều khoản</span>
-							</label>
-						</div>
-					</div>
-					<div class="form-group col-md-12">
-						<button type="submit" name="member_signup" class="btn btn-block btn-warning">Đăng ký</button>
-					</div>
-				</form>
+			<div class="col-md-8 col-xs-1">
+				<img style="width:auto" src="<?=img_url('map.png')?>" alt="">
 			</div>
-			<div class="col-md-4 col-xs-1"></div>
+			<div class="col-md-4 col-xs-10">
+				<div class="form rds5 p15">
+					<h2 class="page-title"><?=$page_name?></h2>
+					<div id="register_status"></div>
+					<form class="form-group row form-validate" id="form-login-acc" action="" method="post">
+						<div class="form-group col-md-6">
+							<label for="email-acc">Họ</label>
+							<input required id="member_firstname" name="member_firstname" type="text" class="form-control">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="email-acc">Tên</label>
+							<input required id="member_lastname" name="member_lastname" type="text" class="form-control">
+						</div>
+						<div class="form-group col-md-12">
+							<label for="pass-acc">Tên đăng nhập</label>
+							<input minlength="5" required id="member_username" name="member_username" type="text" class="form-control">
+						</div>
+						<div class="form-group col-md-12">
+							<label for="pass-acc">Email</label>
+							<input id="member_email" name="member_email" type="email" class="form-control">
+						</div>
+						<div class="form-group col-md-12">
+							<label for="pass-acc">Mật khẩu</label>
+							<input minlength="5" required id="member_password" name="member_password" type="password" class="form-control">
+						</div>
+						<div class="form-group col-md-12">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="remember">
+									&nbsp;<span style="font-size:12px">Tôi đồng ý với mọi điều khoản</span>
+								</label>
+							</div>
+						</div>
+						<div class="form-group col-md-12">
+							<button type="submit" name="member_signup" class="btn btn-block btn-warning">Đăng ký</button>
+						</div>
+						<div class="form-group col-md-12">
+							<a href="<?=base_url('account/sign_in')?>">
+								<button type="button" class="btn btn-block btn-default">Đã có tài khoản ?</button>
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-12 col-xs-1"></div>
 		</div>
 	</div>
 </section>
 
 <script>
+	$(".form-validate").validate({
+			submitHandler:function(form){
+				do_sign_up();
+			}
+		}
+	);
 	function do_sign_up(){
 		var member_firstname 	= $('#member_firstname').val();
 		var member_lastname 	= $('#member_lastname').val();
